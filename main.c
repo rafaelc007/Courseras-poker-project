@@ -44,6 +44,9 @@ int main(int argc, char ** argv){
   
   print_hand(hand);
   printf("\n");
+  if(deck_contains(hand, card_from_letters('5','h')))
+    printf("Deck contais 5h!\n");
+
 
   release_deck(hand);
   
