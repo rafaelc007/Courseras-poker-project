@@ -42,7 +42,7 @@ void assert_repeat(deck_t * d){
   for(unsigned i=0;i<d->n_cards-1;i++){
     for(unsigned j=i+1;j<d->n_cards;j++){
       if(equal_card(*d->cards[i],*d->cards[j])){
-	  printf("ERROR: Deck contains repeated cards!");
+	  printf("ERROR: Deck contains repeated cards!\n");
 	  exit(EXIT_FAILURE);
       }
     }
@@ -58,7 +58,7 @@ void assert_full_deck(deck_t * d) {
     if(!deck_contains(d,card)){
       printf("ERROR: card ");
       print_card(card);
-      printf(" is missing!");
+      printf(" is missing!\n");
       exit(EXIT_FAILURE);
     }
   }
