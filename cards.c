@@ -147,7 +147,7 @@ card_t card_from_letters(char value_let, char suit_let) {
 }
 
 card_t card_from_num(unsigned c) {
-  
+  assert(c<53);
   int suit_n = c/13;
   int value_n = c%13+2;
   
