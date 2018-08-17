@@ -40,6 +40,7 @@ int main(int argc, char ** argv){
     return EXIT_FAILURE;
   }
   deck_t * hand = init_deck(start);
+  shuffle(hand);
   
   print_hand(hand);
   printf("\n");
