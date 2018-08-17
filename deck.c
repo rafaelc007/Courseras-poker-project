@@ -40,10 +40,10 @@ void shuffle(deck_t * d){
 void assert_repeat(deck_t * d){
    // check for repeated cards
   for(unsigned i=0;i<d->n_cards-1;i++){
-    for(unsigned j=i;j<d->n_cards;j++){
+    for(unsigned j=i+1;j<d->n_cards;j++){
       if(equal_card(*d->cards[i],*d->cards[j])){
 	  printf("ERROR: Deck contains repeated cards!");
-	  assert(0);
+	  exit(EXIT_FAILURE);
       }
     }
   }
@@ -59,7 +59,7 @@ void assert_full_deck(deck_t * d) {
       printf("ERROR: card ");
       print_card(card);
       printf(" is missing!");
-      assert(0);
+      exit(EXIT_FAILURE);
     }
   }
 }
